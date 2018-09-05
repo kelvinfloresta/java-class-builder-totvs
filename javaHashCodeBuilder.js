@@ -1,4 +1,4 @@
-const {capitalize, unCapitalize} = require("./utils")
+const {unCapitalize} = require("./utils")
 
 
 function buildHashCode(atributes){

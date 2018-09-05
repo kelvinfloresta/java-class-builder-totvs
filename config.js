@@ -2,6 +2,7 @@ module.exports = {
 
     projectDir : "C:\\TFS\\workspace\\Teste\\src",
     packageName: "br.com.teste",
+    codification: "latin1",
 
     classes: [
 
