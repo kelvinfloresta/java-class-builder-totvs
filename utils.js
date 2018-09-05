@@ -1,5 +1,4 @@
-const {projectDir, packageName} = require("./config")
-const dirPackage = packageName.replace(/\./g,"/")
+const {projectDir} = require("./config")
 const path = require("path")
 const fs = require("fs")
 
@@ -11,12 +10,13 @@ function unCapitalize(word) {
     return word.charAt(0).toLowerCase() + word.slice(1);
 }
 
-function buildPathToSaveFile(fileName){
+function buildPathToSaveFile(packageName, fileName){
+    const dirPackage = packageName.replace(/\./g,"/")
     return path.join(projectDir, dirPackage, fileName)
 }
 
-function writeFile(fileName, fileContent, condification = "latin1"){
-    const completePath = buildPathToSaveFile(fileName)
+function writeFile(packageName, fileName, fileContent, condification = "latin1"){
+    const completePath = buildPathToSaveFile(packageName, fileName)
 
     fs.writeFile(completePath, fileContent, condification, function(err) {
         if(err) {

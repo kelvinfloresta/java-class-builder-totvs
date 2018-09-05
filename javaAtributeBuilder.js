@@ -11,8 +11,8 @@ function buildAtribute(atributeName, atributeType){
 
 function getAtributeType(configClassAtribute){
     return typeof configClassAtribute[1] == "string"
-    ? configClassAtribute[1]
-    : configClassAtribute[0]
+    ? capitalize(configClassAtribute[1])
+    : capitalize(configClassAtribute[0])
 }
 
 function buildAtributes(atributes) {
