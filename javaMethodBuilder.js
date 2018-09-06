@@ -51,4 +51,4 @@ function buildMethods(className, atributes){
     }, "")
 }
 
-module.exports = buildMethods
+module.exports = {buildMethods, buildGetMethod, buildSetMethod, buildWithMethod}

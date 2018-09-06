@@ -9,6 +9,7 @@ module.exports = {
 
         {
             className: "Teste2",
+            nomeSequenceTabela: "s_gid_teste2",
             superClassDTO: undefined, //Valor padrão = AbstractDTO | Opções: AbstractDTO ou DefaultDTO
             atributes: [
                 ["nome", "String", {
@@ -21,6 +22,7 @@ module.exports = {
         },
         {
             className: "Teste",
+            nomeSequenceTabela: "s_gid_teste",
             superClassDTO: undefined,
             atributes: [
                 ["nome", "Long"],

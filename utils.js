@@ -18,15 +18,8 @@ function buildPathToSaveFile(packageName, fileName){
 function writeFile(packageName, fileName, fileContent, condification = "latin1"){
     const completePath = buildPathToSaveFile(packageName, fileName)
 
-    fs.writeFile(completePath, fileContent, condification, function(err) {
-        if(err) {
-            console.error("Falha ao salvar o arquivo", fileName);
-            throw err;
-        }
-        
-        console.log("Arquivo", fileName, "salvo com sucesso!");
-        console.log("Caminho:", completePath);
-    }); 
+    fs.writeFileSync(completePath, fileContent, condification); 
+    console.log("Caminho:", completePath,"\n");
     
 }
 module.exports = {capitalize, unCapitalize, writeFile}
