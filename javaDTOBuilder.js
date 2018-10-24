@@ -29,7 +29,7 @@ function getLocalDateAtribute(atributeNameUnCapitalized){
 
     return `@Mapping("${atributeNameUnCapitalized}")
     @XmlSchemaType(name = "date")
-    private LocalDateTime ${atributeNameUnCapitalized};`
+    private LocalDate ${atributeNameUnCapitalized};`
 }
 
 function getNumericAtribute(atributeNameUnCapitalized, atributeType, {digits: {integer, fraction}} = {digits: {integer:0, fraction:0}}){
