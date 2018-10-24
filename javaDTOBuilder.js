@@ -99,7 +99,7 @@ public class ${classNameCapitalized} extends ${superClass} {
         return new ${classNameCapitalized}();
     }
 
-${buildMethods(className, atributes)}
+${buildMethods(classNameDTO, atributes)}
 }`
 
 }
